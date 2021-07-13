@@ -21,23 +21,55 @@ Pipeline, 5 stages:
 
 1 instruction per cycle
 
+PMP : physical memory protection
+
+U5 processor core:
+  - Instruction memory system
+  - Instruction fetch system
+  - Execution pipeline
+  - Floating point unit
+  - Data memory system
+  - Memory management unit
+  - Support for global, software and timer interrupts
+
+Features:
+  - ISA -> RV64GC
+  - Instruction Cache -> 16 KiB 8-way instruction cache
+  - Instruction tightly integrated memory -> ITIM max size 16 KiB
+  - Data cache -> 16 KiB 8-way data cache
+  - ECC Support -> 
+  - Virtual memory support -> Support for Sv39 virtual memory support with a 39-bit visual
+address sapce, 64-bit physical address space, and a 32-entry TLB
+  - Modes -> Machine mode, Supervisor mode, User mode
 
 
+Instruction fetch unit:
+  Contains a branch predictor: BTB (branch target buffer), -> predictes target of taken branche
+                               BHT (branch history table) -> predicts direction of 
+                                                             conditional branches
+                               RAS (return address stack) -> predicts the target of 
+                                                             procedure returns
 
+Execution Pipeline: single-issue, in-order pipeline
+The pipeline comprises five stages:
+  - Instruction fetch
+  - Instruction decode and register fetch
+  - execute
+  - data memory access
+  - register writeback
 
+Branch and jump instructions transfer control from the memory access pipeline stage
 
+The load-reserved and sotore-conditional instructions are only supported on cached regions
 
+MMU: Memory Management Unit
+The U5 MMU has 64 virtual address space mapped to 64 physicla address space.
+A hardware page-table walker refiils the address transaltion caches
 
+PLIC  = Platform-level interrupt controller
+CLINT = Core-local interruptor
 
-
-
-
-
-
-
-
-
-
+BEU = Bus error unit
 
 
 
