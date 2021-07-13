@@ -79,6 +79,19 @@ The load/store unit handles data memory access
 
 The FPU unit uses MAC = Multiply accumulate (maybe accumulators?)
 
+This implementation lacks SIMD (simple instruction multiple data)
+It completes one MAC operation per cycle
+You can configure the U84 with a second FPU
+
+The integer pipeline has  10 stages for arithmetic operations and 12 stages
+for load/store
+
+Predict -> Fetch | Fetch | Fetch -> Decode | Rename | Dispatch  ==> Fetching
+
+Issue | RR | Exec | WB       ===> Arithmetic pipeline 
+
+Issue | RR | Addr | D$ | D$ | WB  ====> Load pipeline
+
 ============================
 
 
