@@ -1,0 +1,51 @@
+
+A simple 32-bit real-time core
+
+It implementes R32I base isa plus multipy and divide (M), and compress (C) extensions
+
+TSMC = tightly couple memory
+
+4 64-bit AXI buses
+
+1.8GHz
+
+Is similar to SiFive E76
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

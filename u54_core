@@ -1,0 +1,62 @@
+It has:
+  Instruction memory system
+  an instruction fetch system
+  an execution pipeline
+  a data memory system
+  support for global, software, and timer interrupts
+
+ISA : RV64IMAC
+Instruction cache : 16 KiB 2-way instruction cache
+Instruction tightly couple memory : ITIM 
+Data tightly integrated memory 16 KiB DTIM
+ECC Support 
+Modes: Machine mode, User mode.
+
+Pipeline, 5 stages:
+  - Instruction fetch
+  - Instruction decode and register fetch
+  - execute
+  - data memory access
+  - register write back
+
+1 instruction per cycle
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
