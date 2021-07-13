@@ -1,0 +1,60 @@
+LLVM = low level virtual machine
+  It has:
+    Fronte end (C, C++, etc)
+    Optimization
+    Back end (x86, arm, risc)
+MLIR = Medium level intermediate representation
+  This mlir permits the creaation of a hierarchy of compilers
+This MLIR is the idea used by Tenstorrent. They make a graph, which is compiled by MLIR to a
+middle level representation and the by LLVM for the machine code on the
+target board (fpga, for example)
+
+So, at the bottom we have RISC-V, on top of that is LLVM, then MLIR, and on the really top,
+is the software (pytorch, tensorflow, etc). I think that is how it goes
+
+----------------------------------------------------------------------------
+atoms -> silicon -> transistors -> logic gates -> logic units -> ROM
+-> IC -> RAM -> instructions -> cpu -> ISA(risk?) -> motherboard -> OS
+-> Execution environment -> threads -> processes -> software -> gpu -> 
+-> ai framework (pytorch) -> acelerator
+----------------------------------------------------------------------------
+
+binary -> assembly -> C,etc -> Python, etc -> Pytorch, etc 
+
+Use Verilator for HDL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
