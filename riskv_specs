@@ -1,12 +1,10 @@
 RISC-V ISA modules:
   RV32I
   RV32E
-  
   RV64I
-
   RV128I
 
-
+Extension: M, A, F, D, Q, L, C, B, J, T, P, V, N
 
 
 
