@@ -25,7 +25,7 @@ New hardware requires new software. They are trying to make the hw and sf work t
 I really like that. It will make possible a lot of great things
 The idea of open innovation is also really cool
 
-=========================== MLIR ========================
+========= MLIR ========================
 
 MLIR can represent dataflow graph (like the graph made by pytorch -tenstorrent-)
 Pytorch makes dynamics graphs
@@ -33,18 +33,53 @@ Then it makes optimizations and transformations to the graph
 Loop optimization and memory layout transformation
 It can take any DSL 
 
-========================================================
+========================================
 
-=========================== LLVM =======================
+=========== LLVM =======================
 
 It can make register allocation and instruction scheduling
 
-=======================================================
+========================================
 
 ======== 5 stage pipeline ========
 fetch -> decode -> operation -> memory -> wb ...i think?
+
+each cycle completes a stage
+
 ==================================
 
+========= SiFive ============
+7 stage pipeline core 
+
+U74
+
+** U84 **  
+ooo execution / 4 instructions per cycle
+The decoder expands compressed 16bit instructions to 32 equivalent
+2 level branch predicion -> 
+                           BTB : branch table buffer 
+                           BHT : branch history table (Jim keller talked about this)
+Units:
+  3 integer execution units
+  1 Load/Store unit
+  1 Floating point unit 
+
+Microarchitecture:
+  Instrucion table
+  Fetch Queue
+  Expand / Decode
+  Instruction Queue
+  Register Rename / Dispath (changes logic registers to real ones, we don't like fake sht)
+  Issue
+  PRF | FP PRF
+  ALU/Branch | ALU/Mult/Div | ALU | L/S Unit | 64-Bit FPU
+  Data Cache
+
+The load/store unit handles data memory access
+
+The FPU unit uses MAC = Multiply accumulate (maybe accumulators?)
+
+============================
 
 
 Use Verilator for HDL
