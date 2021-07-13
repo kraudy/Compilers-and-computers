@@ -71,7 +71,8 @@ CLINT = Core-local interruptor
 
 BEU = Bus error unit
 
-
+Level 2 cache controller: used to provide access to fast copies of memory for masters in a
+core complex
 
 
 
