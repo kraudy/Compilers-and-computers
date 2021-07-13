@@ -21,6 +21,32 @@ atoms -> silicon -> transistors -> logic gates -> logic units -> ROM
 
 binary -> assembly -> C,etc -> Python, etc -> Pytorch, etc 
 
+New hardware requires new software. They are trying to make the hw and sf work togehter.
+I really like that. It will make possible a lot of great things
+The idea of open innovation is also really cool
+
+=========================== MLIR ========================
+
+MLIR can represent dataflow graph (like the graph made by pytorch -tenstorrent-)
+Pytorch makes dynamics graphs
+Then it makes optimizations and transformations to the graph
+Loop optimization and memory layout transformation
+It can take any DSL 
+
+========================================================
+
+=========================== LLVM =======================
+
+It can make register allocation and instruction scheduling
+
+=======================================================
+
+======== 5 stage pipeline ========
+fetch -> decode -> operation -> memory -> wb ...i think?
+==================================
+
+
+
 Use Verilator for HDL
 
 
