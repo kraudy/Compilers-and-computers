@@ -53,51 +53,12 @@ each cycle completes a stage
 
 U74
 
-** U84 **  
-ooo execution / 4 instructions per cycle
-The decoder expands compressed 16bit instructions to 32 equivalent
-2 level branch predicion -> 
-                           BTB : branch table buffer 
-                           BHT : branch history table (Jim keller talked about this)
-Units:
-  3 integer execution units
-  1 Load/Store unit
-  1 Floating point unit 
-
-Microarchitecture:
-  Instrucion table
-  Fetch Queue
-  Expand / Decode
-  Instruction Queue
-  Register Rename / Dispath (changes logic registers to real ones, we don't like fake sht)
-  Issue
-  PRF | FP PRF
-  ALU/Branch | ALU/Mult/Div | ALU | L/S Unit | 64-Bit FPU
-  Data Cache
-
-The load/store unit handles data memory access
-
-The FPU unit uses MAC = Multiply accumulate (maybe accumulators?)
-
-This implementation lacks SIMD (simple instruction multiple data)
-It completes one MAC operation per cycle
-You can configure the U84 with a second FPU
-
-The integer pipeline has  10 stages for arithmetic operations and 12 stages
-for load/store
-
-Predict -> Fetch | Fetch | Fetch -> Decode | Rename | Dispatch  ==> Fetching
-
-Issue | RR | Exec | WB       ===> Arithmetic pipeline 
-
-Issue | RR | Addr | D$ | D$ | WB  ====> Load pipeline
 
 ============================
 
-
-Use Verilator for HDL
-
-
+For core design:
+  ** Use Chisel for HDL 
+  Automatically generates RTL
 
 
 
