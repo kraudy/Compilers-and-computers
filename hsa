@@ -1,4 +1,11 @@
 HSA: heterogeous system architecture
 tries to reduce latency between cpu and gpu communicaiton
-i does it by trying to use the same memory devices cuz access time to another memory device
-takes too much time, i think.
+it does it by trying to use the same memory devices cuz access time to another disjoint
+memory device takes too much time, i think, what u think?.
+
+HSA allows programs to use the GPU for floating-point operations 
+# i don't know if that is any good, they don't say it either. But they can do it.
+
+DSP: Digital signal processor
+Architecture specialized for digital signal processing
+
