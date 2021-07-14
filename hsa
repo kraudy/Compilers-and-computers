@@ -1,0 +1,4 @@
+HSA: heterogeous system architecture
+tries to reduce latency between cpu and gpu communicaiton
+i does it by trying to use the same memory devices cuz access time to another memory device
+takes too much time, i think.

@@ -74,6 +74,31 @@ current RISC-V thread
 Trap: transfer of control to a trap handler caused by an extension (this, to me, looks the
 same as an exception... but who knows)
 
+When an interrupt that must be serviced occurs, an instruction is selected to be interrupt,
+experiencing a trap # i think this clarifies more what a trap is: is like a planned interrupt 
+
+
+===== RV32I =====
+Base integer instruction set
+sufficient to form a compiler target
+support modern OS environments
+reduced hardware for minimal implementation
+47 unique instructions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
