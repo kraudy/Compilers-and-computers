@@ -53,7 +53,6 @@ each cycle completes a stage
 
 U74
 
-
 ============================
 
 For core design:
@@ -61,6 +60,7 @@ For core design:
   Automatically generates RTL
 
 
+Branches = jumps
 
 
 

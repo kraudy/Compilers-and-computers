@@ -6,13 +6,23 @@ RISC-V ISA modules:
 
 Extension: M, A, F, D, Q, L, C, B, J, T, P, V, N
 
+Avoids over-architecting for a particular microarchitecture
 
+There are two primary base integer variants:
+  - RV32I
+  - RV64I
 
+RV32E is a variant or RV32I for small microcontrollers
 
+The base integer ISA is named "I", and contains:
+  - Integer computaional instructions
+  - Integer load
+  - Integer stores
+  - Control flow instructions
+* And is mandatory for all RISC-V implementations
 
-
-
-
+Extensions:
+  - M : multiplication and division
 
 
 

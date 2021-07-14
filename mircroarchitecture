@@ -1,6 +1,38 @@
 Is the way a given ISA is implemented in a particular processo
 The same ISA can be implemented with many microarchitecture
 
+To run programs, all single or multi chip CPUs:
+  - Read an instruction and decode it
+  - Find any associated data that is needed to process the instruction
+  - Process the instruction
+  - Write the results out
+
+ISAs:
+  - VLIW : very long instruction word
+  - EPIC : explicitly paraller instruction computing 
+
+  - SIMD : single instruction, multiple data
+  - Vectors: vector processor
+
+  - CISC : complex intstruction set computer
+  - RISC : reduced instruction set computer
+
+RISC-V separates each stage of the instruction process and making them take one cycle
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

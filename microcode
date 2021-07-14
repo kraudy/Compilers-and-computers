@@ -1,0 +1,59 @@
+Microcode
+intermediary between hardware (cpu) and ISA 
+
+It consists of a series of microinstructions which control the cpu at a fundametal level
+of hardware circuitry
+Microcode only runs on the exact electronic circuitry for wich it is designed
+
+It seems like microcode is lower than assembly
+
+Hardware -> binary -> microcode -> assm -> C
+
+Microcode -> developed for the control logic of a computer
+
+Instruction sets were hardwired
+
+Instruction pipelining:
+
+Cache:
+
+Branch prediction:
+
+Out-of-order execution: allows a ready instruction to be processed while an older 
+intruction waits
+
+Register renaming:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
