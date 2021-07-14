@@ -21,24 +21,58 @@ The base integer ISA is named "I", and contains:
   - Control flow instructions
 * And is mandatory for all RISC-V implementations
 
-Extensions:
-  - M : multiplication and division
+===== Extensions ======
+  
+"M" multiplication and division extension:
+  adds instructions to multipy and divide
 
+That's what the extensions do. They add instructions
+Each extension adds specific instructions
+** That's what the ISA's are. They are just a bunch of instructions
+Instructions for: load, store, operations, control flow, etc
+The base integer "I" adds all the basic instructions. After that, you can add the 
+extensions or modules that you need so you don't have a lot of junk
 
+"A" Atomic instruction extension:
+  adds instruction that automatically read, modify, and write memory
 
+"F" Floating point extension:
+  add floating-point registers, single precision computational instructions
+  and single-precision loads and stores
+  (it seems like the extensions can also add registers, not only instructions)
 
+"D" Double-precision floating point extension:
+  adds double-precision computational instructions, loads, stores
 
+An integer base plus these four extensions (IMAFD) is given the abbreviation "G"
 
+"G" extension. A general purpose scalar instruction set:
+  I + M + A + F + D = IMAFD
 
+RV32G and RV64G are the default target of compilers toolchains
 
+====== Instruction lenght encoding ====
+base isa has 32-bit instructions
+VLI can be placed in 16-bits (4 bytes, or a word) instruction parcels
 
+big-endian(BE) = stores the most significant bit (MSB) at the smallest address
+little-endian(LE) = stores the least significatn bit (LSB) at the largest address
 
+Base RISC-V ISA has little-endian memory system
 
+Instructions are always stored in a little-endian sequence of parcels
+regardless of the memory system endianess
 
+word = 4 bytes
+halfowrd = 2 bytes
+doubleword = 8 bytes
 
+===== Exceptions, etc ======
+Exception: unusual condition ocurring at run time associated wit an instruction in the
+current RISC-V thread
 
-
-
+Trap: transfer of control to a trap handler caused by an extension (this, to me, looks the
+same as an exception... but who knows)
 
 
 
