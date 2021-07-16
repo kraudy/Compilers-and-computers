@@ -1,0 +1,38 @@
+Notes about all electronic related stuff
+
+MOSFET: metal-oxyde-semiconductor field-effect transistor 
+# try remembering that!
+A MOSFET is a kind of transistor!
+# why the hell they don't say that in the definition?
+# yeah, they do say it...
+
+FET: field-effect-transistor they involve single carrier operation (uniporlar, unlike
+BJT -bipolar junction transistor): n-channel or p-channel
+There are 2 kinds of FET: 
+  JFET (junction gate)  : 3 terminal semiconductor
+  IGFET (insulated gate): 4 terminal semiconductor
+
+NMOS
+CMOS
+
+high-k
+
+Extrinsic semiconductor = doped semiconductor
+doped = Intentional introduction of impurities into a semiconductor
+
+** This is why semiconductors are important: Their conductivity can be manipulated over
+many orders of magnitude by doping
+
+Semiconductor doping: Changes an intrinsic semiconductor to an extrinsic one
+
+Increasing the electron carrier concentration(nO) makes the semicunductor n-type
+Increasing the hole carrier concentration (pO) creates a p-type semiconductor
+
+diode: allows current in one direction -> consists of p-type and n-type semiconductors 
+placed in junction
+
+n-type -> has excess of electrons | n -> negative
+p-type -> has excess of holes     | p -> positive
+
+Transistors: Is a semiconductor that enables current switching # on/off kinda thing
+It has 3 terminals
