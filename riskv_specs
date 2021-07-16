@@ -83,20 +83,27 @@ Base integer instruction set
 sufficient to form a compiler target
 support modern OS environments
 reduced hardware for minimal implementation
-47 unique instructions
 
+47 unique instructions, but a simpler implementation might cover the
+eight SCALL/SBREAK/CSRR instructions with a single SYSTEM hardware instruction,etc
 
+RV32I can emulate almost all other ISA extension
 
+32 = 32 registers: x0, x1, x2, x3 ... x30, x31
+There are 31 general-purpose registers (x1-x31) which hold integer values. Register x0 is 
+hardwired to the constant 0
+No harwired return address register. But convention uses x1 to hold the return address on
+a call
+Registers are 32 bits wide/ 8 bytes or a double word (DW)
 
+RV64 registers are 64 bits (as expected)
 
+XLEN: width of a register in bits
 
+There is one additional user-visible register: PC (holds the address of the
+current instruction)
 
-
-
-
-
-
-
+The ISA runs compiled code
 
 
 
