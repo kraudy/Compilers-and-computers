@@ -105,6 +105,55 @@ current instruction)
 
 The ISA runs compiled code
 
+Three address instruction format
+Opcode | Destination | Source1 | Source2
+X = (A + B) * (C + D)
+ADD R1, A, B
+ADD R2, C, D
+MUL X, R1, R2
+
+Zero address instruction format (accumulator type thing)
+X = (A + B) * (C + D)
+LOAD A
+PUSH A
+PUSH B
+ADD
+PUSH C
+PUSH D
+ADD
+MUL
+POP X
+
+loop unrolling: write the whole loop as instructions to remove all the logic of checking and
+stuff
+
+branch table example:
+table
+  goto index_zero
+  goto indez_one
+index_zero
+  ;code
+  return
+index_one
+  ;code
+  return
+
+Basic five stage pipeline: IF, ID, EX, MEM, WB
+RV32I registers
+---------------
+x0 / zero
+x1
+...
+x31
+--------------
+pc
+-------------
+
+
+
+
+
+
 
 
 
